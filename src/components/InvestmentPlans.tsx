@@ -1,5 +1,6 @@
 import { Button } from "./ui/button";
-import { Check, TrendingUp, Clock, Users } from "lucide-react";
+import { Check } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const plans = [
   {
@@ -57,6 +58,23 @@ const plans = [
 ];
 
 const InvestmentPlans = () => {
+  const { toast } = useToast();
+
+  const handleStartInvesting = () => {
+    toast({
+      title: "Contact Information",
+      description: (
+        <div className="space-y-2">
+          <p>📞 Phone: +1 (555) 123-4567</p>
+          <p>📧 Email: contact@marketmind.com</p>
+          <p>📍 Address: 123 Trading Street, Financial District</p>
+          <p>Our team will be happy to assist you with your investment journey!</p>
+        </div>
+      ),
+      duration: 10000,
+    });
+  };
+
   return (
     <div className="bg-primary py-20 px-4">
       <div className="container mx-auto">
@@ -128,6 +146,7 @@ const InvestmentPlans = () => {
                     ? "bg-secondary text-primary hover:bg-secondary/90"
                     : "bg-primary text-white hover:bg-primary/90"
                 }`}
+                onClick={handleStartInvesting}
               >
                 Start Investing
               </Button>
