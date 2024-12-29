@@ -1,40 +1,58 @@
 import { Button } from "./ui/button";
-import { Check } from "lucide-react";
+import { Check, TrendingUp, Clock, Users } from "lucide-react";
 
 const plans = [
   {
     name: "Starter",
     price: "$1,000",
+    description: "Perfect for new investors starting their journey",
     features: [
       "5% Monthly Returns",
-      "Basic AI Analytics",
-      "Weekly Reports",
-      "Email Support",
+      "Monthly Performance Reports",
+      "Email Support Response within 24h",
+      "Basic Market Analysis",
+      "Minimum Lock Period: 3 Months",
     ],
+    returns: {
+      monthly: 50,
+      yearly: 600,
+    },
   },
   {
     name: "Professional",
     price: "$10,000",
+    description: "Ideal for serious investors seeking consistent returns",
     features: [
       "5% Monthly Returns",
-      "Advanced AI Analytics",
-      "Daily Reports",
-      "Priority Support",
-      "Personal Account Manager",
+      "Weekly Performance Reports",
+      "Priority Support Response within 12h",
+      "Detailed Market Analysis",
+      "Minimum Lock Period: 6 Months",
+      "Dedicated Account Manager",
     ],
+    returns: {
+      monthly: 500,
+      yearly: 6000,
+    },
     popular: true,
   },
   {
     name: "Enterprise",
     price: "$100,000",
+    description: "For institutional investors and high-net-worth individuals",
     features: [
       "5% Monthly Returns",
-      "Custom AI Solutions",
-      "Real-time Reports",
-      "24/7 Support",
-      "Dedicated Team",
-      "Custom Strategies",
+      "Daily Performance Reports",
+      "Instant VIP Support",
+      "Comprehensive Market Analysis",
+      "Minimum Lock Period: 12 Months",
+      "Dedicated Investment Team",
+      "Quarterly Strategy Review",
     ],
+    returns: {
+      monthly: 5000,
+      yearly: 60000,
+    },
   },
 ];
 
@@ -47,7 +65,7 @@ const InvestmentPlans = () => {
             Investment Plans
           </h2>
           <p className="text-xl text-gray-300">
-            Choose the plan that fits your investment goals
+            Choose the investment plan that matches your financial goals
           </p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -71,9 +89,31 @@ const InvestmentPlans = () => {
                 <h3 className="text-2xl font-bold text-primary mb-2">
                   {plan.name}
                 </h3>
+                <p className="text-gray-600 mb-4">{plan.description}</p>
                 <div className="text-4xl font-bold text-primary">{plan.price}</div>
                 <div className="text-gray-600 mt-2">Minimum Investment</div>
               </div>
+              
+              <div className="bg-gray-50 p-4 rounded-lg mb-6">
+                <div className="text-center">
+                  <div className="text-gray-600 mb-2">Expected Returns</div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div>
+                      <div className="text-xl font-bold text-primary">
+                        ${plan.returns.monthly}
+                      </div>
+                      <div className="text-sm text-gray-600">Monthly</div>
+                    </div>
+                    <div>
+                      <div className="text-xl font-bold text-primary">
+                        ${plan.returns.yearly}
+                      </div>
+                      <div className="text-sm text-gray-600">Yearly</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <ul className="space-y-4 mb-8">
                 {plan.features.map((feature) => (
                   <li key={feature} className="flex items-center gap-3">
@@ -89,7 +129,7 @@ const InvestmentPlans = () => {
                     : "bg-primary text-white hover:bg-primary/90"
                 }`}
               >
-                Get Started
+                Start Investing
               </Button>
             </div>
           ))}
