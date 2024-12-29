@@ -11,16 +11,16 @@ const AboutSection = () => {
               Why Choose MARKET MIND?
             </h2>
             <p className="text-lg text-gray-600">
-              With over a decade of experience in financial markets, our team of
-              expert traders and AI-powered systems work together to deliver
-              consistent returns for our investors.
+              With over a decade of experience in financial markets, our expert
+              trading team consistently delivers 5% monthly returns through
+              strategic market positioning and professional risk management.
             </p>
             <div className="space-y-4">
               {[
-                "Expert Trading Team",
-                "Advanced AI Analytics",
-                "24/7 Market Monitoring",
-                "Proven Track Record",
+                "Professional Trading Team",
+                "Strategic Market Analysis",
+                "24/7 Portfolio Monitoring",
+                "Proven Return History",
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3">
                   <CheckCircle className="text-secondary w-6 h-6" />
@@ -29,7 +29,7 @@ const AboutSection = () => {
               ))}
             </div>
             <Button className="bg-primary text-white hover:bg-primary/90">
-              Learn About Our Process
+              Start Investing Now
             </Button>
           </div>
           <div className="relative">
@@ -39,18 +39,18 @@ const AboutSection = () => {
               <div className="space-y-6">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-primary mb-2">
-                    Our Success in Numbers
+                    Our Investment Success
                   </h3>
                   <p className="text-gray-600">
-                    Proven results that speak for themselves
+                    Consistent returns through expert trading
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   {[
                     { label: "Active Investors", value: "10,000+" },
                     { label: "Monthly Returns", value: "5%" },
-                    { label: "Years Experience", value: "10+" },
-                    { label: "Success Rate", value: "99.9%" },
+                    { label: "Years Trading", value: "10+" },
+                    { label: "Portfolio Success", value: "99.9%" },
                   ].map((stat) => (
                     <div key={stat.label} className="text-center">
                       <div className="text-2xl font-bold text-secondary mb-1">

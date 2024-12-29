@@ -22,21 +22,21 @@ const HeroSection = () => {
             <span className="text-secondary">MARKET MIND</span>
           </h1>
           <p className="text-xl md:text-2xl text-gray-300 animate-fade-in delay-100">
-            Guaranteed {count.toFixed(1)}% Monthly Returns
+            Guaranteed {count.toFixed(1)}% Monthly Returns Through Expert Trading
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fade-in delay-200">
             <Button
               size="lg"
               className="bg-secondary text-primary hover:bg-secondary/90"
             >
-              Get Started <ArrowRight className="ml-2" />
+              Start Investing <ArrowRight className="ml-2" />
             </Button>
             <Button
               size="lg"
               variant="outline"
               className="border-secondary text-secondary hover:bg-secondary/10"
             >
-              Learn More
+              View Performance
             </Button>
           </div>
         </div>
@@ -44,23 +44,23 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
           <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm animate-float">
             <TrendingUp className="w-12 h-12 text-secondary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Smart Trading</h3>
+            <h3 className="text-xl font-semibold mb-2">Expert Trading</h3>
             <p className="text-gray-300">
-              AI-powered analysis for optimal trading decisions
+              Professional traders managing your investments
             </p>
           </div>
           <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm animate-float delay-100">
             <Shield className="w-12 h-12 text-secondary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Secure Platform</h3>
+            <h3 className="text-xl font-semibold mb-2">Secure Investment</h3>
             <p className="text-gray-300">
-              Bank-grade security for your investments
+              Your capital protected by strict risk management
             </p>
           </div>
           <div className="bg-white/5 p-6 rounded-lg backdrop-blur-sm animate-float delay-200">
             <Award className="w-12 h-12 text-secondary mb-4" />
-            <h3 className="text-xl font-semibold mb-2">Proven Results</h3>
+            <h3 className="text-xl font-semibold mb-2">Proven Returns</h3>
             <p className="text-gray-300">
-              Consistent returns backed by expert traders
+              Consistent 5% monthly returns for investors
             </p>
           </div>
         </div>
